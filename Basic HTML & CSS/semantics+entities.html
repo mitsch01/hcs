@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML semantic text elements</title>
+</head>
+<body>
+   
+    <!-- semantics: 
+        > strong (1st importance from the view of the author: bold)
+        > em (2nd importance from the view of the author: italic)
+        > ins (3rd importance from the view of the author: underlines inserted text)
+        > del (to mark deleted text)
+        > mark (highlights relevant text in yellow from the view of a reader)
+    -->
+    <p> 
+        Lorem, ipsum dolor <strong>stronsit</strong> amet consectetur adipisicing elit. Fugiat optio quibusdam, aliquid libero dicta possimus. Blanditiis, delectus, obcaecati est neque ipsa molestiae non saepe porro repellendus eius libero, nihil autem.
+    </p>
+    <p>
+        Alias reiciendis repudiandae asperiores veniam <mark>esse unde delectus minima</mark>, nostrum pariatur <em>recusandae</em> nihil, accusamus ipsa voluptatum. Consequuntur eaque ea molestiae, animi magni, deleniti veniam ratione nesciunt dolore, temporibus nemo voluptatum.
+    </p>
+    <p>
+        Tenetur sint soluta mollitia, reiciendis nisi impedit voluptatibus. Ad corporis quae autem labore omnis exercitationem porro obcaecati sit eius <ins>incidunt</ins>. <del>Iste laborum similique reprehenderit beatae officiis eius, quasi eligendi labore?</del>
+    </p>
+        
+    <!-- entities: just google whatever you need and copy&paste the html code-->
+    <p>&copy; 2024 Miriam Schwartz</p>
+        
+    <p>&#9730;&#9748; </p>
+
+    <!-- s - subscript -->
+    <p>Water: H<sub>2</sub>O</p> 
+
+    <!-- s - supersscript -->
+    <p>Oxigen: O<sup>2</sup></p> 
+
+    <!-- &nbsp; adds whitespace (only use when in a hurry!)-->
+    <p>Lorem ipsum &nbsp; &nbsp; dolor sit amet consectetur adipisicing elit. Distinctio molestiae officiis fuga ex facilis, doloremque numquam itaque nihil quae aperiam? Quas tenetur beatae vero ab doloribus optio quis nam fuga?</p>
+
+    <!-- pre keeps all the origimal whitespace, but the font is changed to monospace and the lines do not break at the end of the line-->
+    <pre>Lorem ipsum       dolor sit amet consectetur adipisicing elit. Distinctio molestiae officiis     fuga ex facilis, doloremque numquam itaque nihil quae aperiam? Quas tenetur beatae 
+            vero ab doloribus optio quis nam fuga?</pre>
+
+    <!-- computer stuff-->
+    <p>Example of a JavaScript program:</p>
+
+    <code><pre>
+        let name="Pedro Remoaldo";
+        console.log(name);
+    </pre></code>
+
+    <!-- if you use kbd you can change the font and color simoultaneously for all the text within the kbd commands-->
+    <p>Press <kbd>C+Ctrl</kbd> to copy text.</p>
+
+    <!-- mathematical stuff-->
+    <p>The result of the calculation is: <samp>25</samp></p>
+    <p>Einstein defined the following formula: <var>E</var>=<var>m</var><var>c</var><sup>2</sup></p>
+
+    <!-- quotes -->
+    <p>The most famous quote from <cite>Hamlet</cite>: <q>To be or not to be.</q></p>
+    <p lang="de">The most famous quote from Hamlet: <q >To be or not to be.</q></p>
+
+    <blockquote cite="https://shakespeare.mit.edu/hamlet/full.html" title="Taken from Hamlet">
+        <pre>
+        BERNARDO
+        Who's there?
+        FRANCISCO
+        Nay, answer me: stand, and unfold yourself.
+        BERNARDO
+        Long live the king!
+        FRANCISCO
+        Bernardo?
+        BERNARDO
+        He.
+        FRANCISCO
+        You come most carefully upon your hour.
+        BERNARDO
+        'Tis now struck twelve; get thee to bed, Francisco.</pre>
+    </blockquote>
+
+    <p><abbr title="United Nations">UN</abbr> means United Nations</p>
+
+    <!-- only use br in combination with addresses -->
+    <address>
+        Hamburg Coding School <br>
+        Gasstraße 4 <br>
+        22761 Hamburg <br>
+        Germany 
+    </address>
+
+    <!-- don't use in paragraphs -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae laboriosam, voluptates, veritatis aliquid sed voluptatibus <br> laborum saepe omnis qui perferendis reiciendis! Adipisci consectetur quasi assumenda, mollitia nulla qui sequi tempora.</p>
+
+</body>
+</html>

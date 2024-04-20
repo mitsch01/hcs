@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        @font-face {
+            font-family: "Playpen";
+            src:
+                local("Playpen"),
+                url("fonts/PlaypenSans/PlaypenSans_Bundle/OTF/PlaypenSans-Regular.otf") format("truetype")
+        }
+
+        /* tag selectors */
+        body /* alternatively, * {} or :root {} can be used as a universal selector, but will make the page a little bit slower */
+        {
+            background-color: #646c4a;
+            font-family: Playpen;
+        }
+        h1 {
+            /* default size is 2em which means it*s twice the default size, which is 2x16px = 32px */
+            color: white;
+            text-transform: uppercase;
+        }
+        p {
+            color:white; /* changes the text color */
+            font-size: 24; /* kebap notation */ /* default size of text in almost all the browsers is 16px */
+            line-height: 24px;
+        }
+      
+        .special /* class selector - the most used selector in CSS */
+        {
+            color: white;
+            font-weight: lighter;
+            letter-spacing: 1px; /* kerning */
+            word-spacing: 0.5em;
+        }
+
+        .specialText /* the one inside the span element */
+        {
+            color: black;
+        }
+
+       #highlight /* id selector */
+        {
+            background-color: yellow;
+            text-decoration: line-through underline overline;
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Example</h1> 
+    <p class="special">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad doloremque perspiciatis minima impedit error, quam fugiat totam illum quos sit odit eveniet dignissimos, quibusdam ex, fugit facilis libero odio eligendi.</p>
+    <p id="highlight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quis odio libero aperiam , odit ut vitae dolorem ducimus voluptates rem deserunt aliquam excepturi quisquam commodi pariatur?</p>
+    <p class="special">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error facere sunt dolorum, nesciunt <span class="specialText">quidem quos quam nemo</span> dolore aspernatur deleniti dolorem fugiat inventore et architecto culpa minus necessitatibus voluptatum quo vel, ullam dolor temporibus.</p>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms in HTML</title>
+</head>
+<body>
+    <h1>Create new account</h1>
+    <!-- action defines the  file that is going to process the form when it is submitted-->
+    <!-- rules for ids: only digits and letters in lowercase/camelcase/snakecase notation; no spaces, symbols, accents -->
+    <form id="newaccountform" action="processform.aspx"></form>
+        <p>
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name">
+        </p>
+        <p>
+            <label for="address">Address: </label>
+            <input type="text" name="address" id="address">
+        </p>
+        <p>
+            <label for="postalcode">Postal Code: </label>
+            <input type="text" name="postalcode" id="postalcode" size="5" maxlength="5">
+        </p>
+        <p>
+            <label for="country">Country: </label>
+            <!-- size in select creates a menu (not very common) -->
+            <select id="country" size="8"> 
+                <option value="0">-- Select a country --</option>
+                <optgroup label="Europe">
+                    <option value="de">Germany</option>
+                    <option value="hr">Croatia</option>
+                </optgroup>
+                <optgroup label="Asia">
+                    <option value="in">India</option>
+                    <option value="tl">Thailand</option>
+                </optgroup>
+            </select>
+
+        <p>Gender: 
+            <input type="radio" name="gender" value="F" id="female" checked>
+            <label for="female">Female</label>
+            <input type="radio" name="gender" value="M" id="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="O" id="other">
+            <label for="other">Other: </label>
+            <input type="text" id="otherGender" disabled>
+        </p>
+
+        <p>Hobbies:
+            <input type="checkbox" value="cinema" name="hobbies" id="checkbox">
+            <label for="cinema">Cinema</label>
+            <input type="checkbox" value="chess" name="hobbies" id="chess">
+            <label for="chess">Chess</label>
+            <input type="checkbox" value="travel" name="hobbies" id="travel">
+            <label for="travel">Travel</label>
+        </p>
+             
+        <p><input type="submit" value="Create account"></p>
+
+        <script>
+            document.getElementById("other").addEventListener("click", function() {
+                document.getElementById("otherGender").removeAttribute("disabled");
+                document.getElementById("otherGender").focus();
+            });
+            document.getElementById("female").addEventListener("click", function() {
+                document.getElementById("otherGender").setAttribute("disabled",true);
+                document.getElementById("otherGender").value="";
+            });
+            document.getElementById("male").addEventListener("click", function() {
+                document.getElementById("otherGender").setAttribute("disabled",true);
+                document.getElementById("otherGender").value="";
+            });
+        </script>
+
+            
+        </p>
+        <p></p>
+</body>
+</html>
